@@ -1,4 +1,5 @@
 const express = require('express');
+const jsonServer = require('./jsonServer');
 const expressGraphQL = require('express-graphql').graphqlHTTP;
 const schema = require('./schema/schema');
 

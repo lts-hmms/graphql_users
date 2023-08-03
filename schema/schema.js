@@ -23,7 +23,7 @@ const RootQuery = new GraphQLObjectType({
             type: UserType, // type of data we are returning from the resolve function
             args: { id: { type: GraphQLString } }, // arguments we are expecting to receive
             resolve(parentValue, args) { 
-                return axios.get(`http://localhost:3000/users/${args.id}`)
+                return axios.get(`http://localhost:3001/users/${args.id}`)
                     .then(resp => resp.data); 
         }
     }
