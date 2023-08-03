@@ -1,18 +1,11 @@
 const graphql = require('graphql');
-const _ = require('lodash'); // helper library to walk through collections of data
+const axios = require('axios');
 const {
     GraphQLObjectType,
     GraphQLString,
     GraphQLInt,
     GraphQLSchema
 } = graphql;
-
-// hardcoded list of users
-const users = [
-    { id: '9', firstName: 'Hannah', age: 20 },
-    { id: '15', firstName: 'Erol', age: 29 }
-];
-
 
 const UserType = new GraphQLObjectType({
     name: 'User',
@@ -30,7 +23,8 @@ const RootQuery = new GraphQLObjectType({
             type: UserType, // type of data we are returning from the resolve function
             args: { id: { type: GraphQLString } }, // arguments we are expecting to receive
             resolve(parentValue, args) { 
-                return _.find(users, { id: args.id }); // resolve function is where we actually go into our database and find the data we are looking for
+                return axios.get(`http://localhost:3000/users/${args.id}`)
+                    .then(resp => resp.data); 
         }
     }
 }});

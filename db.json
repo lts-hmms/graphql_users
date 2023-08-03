@@ -1,0 +1,8 @@
+{
+  "users": [
+    { "id": "6", "firstName": "John Doe", "age": 20 },
+    { "id": "22", "firstName": "Jane Doe", "age": 25 },
+    { "id": "52", "firstName": "John Smith", "age": 30 },
+    { "id": "102", "firstName": "Jane Smith", "age": 35 }
+  ]
+}
