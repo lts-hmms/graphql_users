@@ -1,8 +1,15 @@
 {
   "users": [
-    { "id": "6", "firstName": "John Doe", "age": 20 },
-    { "id": "22", "firstName": "Jane Doe", "age": 25 },
-    { "id": "52", "firstName": "John Smith", "age": 30 },
-    { "id": "102", "firstName": "Jane Smith", "age": 35 }
+    { "id": "6", "firstName": "Elton", "age": 20, "companyId": "1" },
+    { "id": "7", "firstName": "Mehmet", "age": 25, "companyId": "1" },
+    { "id": "8", "firstName": "Naima", "age": 30, "companyId": "2" },
+    { "id": "9", "firstName": "Erol", "age": 35, "companyId": "4" },
+    { "id": "10", "firstName": "Margret", "age": 40, "companyId": "3" }
+  ],
+  "companies": [
+    { "id": "1", "name": "Apple", "description": "iPhone maker" },
+    { "id": "2", "name": "Google", "description": "Search engine" },
+    { "id": "3", "name": "Facebook", "description": "Social network" },
+    { "id": "4", "name": "Twitter", "description": "Microblogging service" }
   ]
 }
