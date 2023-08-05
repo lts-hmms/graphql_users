@@ -1,12 +1,11 @@
-const express = require('express');
-const jsonServer = require('./jsonServer');
-const expressGraphQL = require('express-graphql').graphqlHTTP;
-const schema = require('./schema/schema');
+import express from 'express';
+import { graphqlHTTP } from 'express-graphql';
+import schema from './schema/schema.js';
 
 const app = express();
 const port = 4000;
 
-app.use('/graphql', expressGraphQL({
+app.use('/graphql', graphqlHTTP({
     schema,
     graphiql: true  // GraphiQL is a graphical interactive in-browser GraphQL IDE: development tool for sending queries, mutations and viewing results
 }));

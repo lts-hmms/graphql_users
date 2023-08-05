@@ -1,12 +1,13 @@
 {
   "name": "graphql_users",
+  "type": "module",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "json:server": "json-server --watch db.json --port 3001",
-    "dev": "nodemon server.js"
+    "dev": "nodemon --exec babel-node server.js"
   },
   "author": "",
   "license": "ISC",
@@ -17,5 +18,10 @@
     "graphql": "^15.8.0",
     "json-server": "^0.17.3",
     "nodemon": "^3.0.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.22.9",
+    "@babel/core": "^7.22.9",
+    "@babel/preset-env": "^7.22.9"
   }
 }
